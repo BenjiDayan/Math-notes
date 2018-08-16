@@ -1,0 +1,150 @@
+\documentclass{tufte-handout}
+\usepackage{amsmath,amsfonts,amssymb}
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{figures/}}
+
+\title{Benji Optimization Notes}
+\author{Benjamin Dayan}
+
+% Make prettier tables.
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% control page layout / margins
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+	right=20mm,
+}
+
+
+
+%%% Custom Commands
+%---------------------------------------------------------------------------
+\newenvironment{defi}[1]
+{\noindent \textbf{Definition: #1}\\
+\itshape \noindent}
+{\\}
+
+\newenvironment{thm}[1]
+{\noindent \textbf{Theorem: #1}\\
+	\itshape \noindent}
+{\\}
+
+\newenvironment{cor}[1]
+{\noindent \textbf{Corollary: #1}\\
+	\itshape \noindent}
+{\\}
+
+
+% Concise referencing
+\newcommand{\eqnref}[1]{\eqref{#1}}
+\newcommand{\secref}[1]{Section \ref{#1}}
+\newcommand{\figref}[1]{Figure \ref{#1}}
+\newcommand{\lemref}[1]{Lemma \ref{#1}}
+\newcommand{\corref}[1]{Corollary \ref{#1}}
+\newcommand{\thmref}[1]{Theorem \ref{#1}}
+% Real numbers
+\newcommand{\Real}[1]{\mathbb{R}^{#1}}
+% Complex numbers
+\newcommand{\Complex}[1]{\mathbb{C}^{#1}}
+% Integers
+\newcommand{\Integer}[1]{\mathbb{Z}^{#1}}
+% Rank operator
+\DeclareMathOperator{\rank}{\textnormal{rank}}
+% Vec operator
+\newcommand{\vecop}{\textnormal{vec}}
+% Norm
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+% Trace
+\newcommand{\trace}{\textnormal{tr}}
+% Range
+\newcommand{\range}{\textnormal{range}}
+% Partial derivative
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+% Complete derivative
+\newcommand{\dd}[2]{\dfrac{d #1}{d #2}}
+% Complete derivative, second order
+\newcommand{\dds}[2]{\dfrac{d^2 #1}{d {#2}^2}}
+% Limit to N / N
+\newcommand{\limover}[1]{\lim_{#1 \rightarrow \infty} \dfrac{1}{#1}}
+% Display style sum
+\newcommand{\dsum}{\displaystyle\sum}
+% arg min and arg max
+\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg~max}}}
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg~min}}}
+%---------------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}
+
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Linear Programs}
+	%---------------------------------------------------------------------------
+	\begin{defi}{optimization under constraints standard form}
+		minimize $f(x)$ subject to $g(x) = b$ and $x \in X$
+	\end{defi}
+	
+	\begin{defi}{linear Program}
+		minimize $c^\intercal x$ subject to $Ax = b$ and $x \geq 0$ hmm $c^\intercal x$
+	\end{defi}
+
+	\begin{defi}{functional, regional constraints $\therefore$ feasible set}
+	\end{defi}
+	
+	
+	\begin{defi}{convex set}
+	\end{defi}
+	\begin{defi}{convex function}
+	\end{defi}
+
+	\begin{thm}{the feasible set of a LP is convex}
+	\end{thm}
+
+	\begin{defi}{extreme points}\end{defi}
+	
+	\begin{defi}{basic solutions and the basis}
+		solutions to $Ax = b$ where $A$ is $m \times n$, and $x$ has at least $n-m$ zero variables. The \textbf{basis} is the $m \times m$ matrix in $A$, and is assumed to have linearly independent columns
+	\end{defi}
+
+	\begin{defi}{adsf}
+		Here is a bunch of text that I'm writing for the sake of filling up space in the hope that something weird will happen I guess?
+	\end{defi}
+	
+
+	Here is a bunch of text that I'm writing for the sake of filling up space in the hope that something weird will happen I guess?
+		
+	
+	
+	
+	\begin{theorem}
+		This is a theorem
+	\end{theorem}
+	
+	
+	\section{Section 1}
+	%---------------------------------------------------------------------------
+	
+	
+	\subsection{Subsection 1}
+	%---------------------------------------------------------------------------
+\end{document}
