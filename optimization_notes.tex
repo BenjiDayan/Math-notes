@@ -1,5 +1,5 @@
 \documentclass{tufte-handout}
-\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{amsmath,amsfonts,amssymb, lipsum, enumitem}
 
 % Set up the images/graphics package
 \usepackage{graphicx}
@@ -46,13 +46,14 @@
 \newenvironment{thm}[1]
 {\noindent \textbf{Theorem: #1}\\
 	\itshape \noindent}
-{\\}
+{\newline}
 
 \newenvironment{cor}[1]
 {\noindent \textbf{Corollary: #1}\\
 	\itshape \noindent}
 {\\}
 
+\setlist[enumerate]{itemsep=0mm}
 
 % Concise referencing
 \newcommand{\eqnref}[1]{\eqref{#1}}
@@ -108,7 +109,7 @@
 		minimize $c^\intercal x$ subject to $Ax = b$ and $x \geq 0$ hmm $c^\intercal x$
 	\end{defi}
 
-	\begin{defi}{functional, regional constraints $\therefore$ feasible set}
+	\begin{defi}{functional, regional constraints $\implies$ feasible set}
 	\end{defi}
 	
 	
@@ -126,12 +127,15 @@
 		solutions to $Ax = b$ where $A$ is $m \times n$, and $x$ has at least $n-m$ zero variables. The \textbf{basis} is the $m \times m$ matrix in $A$, and is assumed to have linearly independent columns
 	\end{defi}
 
-	\begin{defi}{adsf}
-		Here is a bunch of text that I'm writing for the sake of filling up space in the hope that something weird will happen I guess?
-	\end{defi}
-	
+	\begin{thm}{fundamental theorem of LP}
+		\begin{enumerate}
+			\item if there is a feasible solution, there is a basic feasible solution
+			\item if there is an optimal feasible solution, there is an optimal basic feasible solution
+		\end{enumerate}
+	\end{thm}
 
-	Here is a bunch of text that I'm writing for the sake of filling up space in the hope that something weird will happen I guess?
+	\begin{thm}{equivalence of basic feasible points and extreme points}
+	
 		
 	
 	
